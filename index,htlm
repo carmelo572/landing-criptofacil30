@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CriptoFácil30 - Aprende a Invertir en Criptomonedas en 30 Días</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    /* Reset y Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .mt-4 {
+      margin-top: 1.5rem;
+    }
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #FFD700;
+      color: #000;
+      font-weight: 700;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 10px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+    }
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 7px 15px rgba(255, 215, 0, 0.5);
+    }
+    .btn-large {
+      padding: 20px 40px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    /* Header Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: #fff;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #FFD700;
+      margin-bottom: 20px;
+      font-weight: 800;
+      text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+    }
+    .hero p {
+      font-size: 1.5rem;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    /* Super Copy */
+    .super-copy {
+      padding: 60px 20px;
+      background: #fff;
+    }
+    .super-copy h2 {
+      font-size: 2.5rem;
+      color: #FFD700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .benefits {
+      max-width: 800px;
+      margin: 40px auto;
+      list-style: none;
+    }
+    .benefits li {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding-left: 40px;
+      position: relative;
+    }
+    .benefits li::before {
+      content: "✓";
+      color: #FFD700;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    /* Oferta Irresistible (Stack de Valor) */
+    .oferta {
+      padding: 80px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    .oferta h2 {
+      font-size: 2.8rem;
+      color: #FFD700;
+      margin-bottom: 40px;
+    }
+    .value-box {
+      background: #FFD700;
+      color: #000;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+      border: 3px solid #000;
+    }
+    .value-item {
+      font-size: 1.3rem;
+      margin: 15px 0;
+      text-align: left;
+    }
+    .value-total {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 20px 0;
+      text-decoration: line-through;
+      color: #333;
+    }
+    .price-today {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #000;
+      margin: 20px 0;
+      background: #000;
+      color: #FFD700;
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 100%;
+      max-width: 500px;
+    }
+    .discount-alert {
+      font-size: 1.8rem;
+      color: #000;
+      margin: 20px 0;
+      font-weight: 700;
+    }
+
+    /* Garantía */
+    .garantia {
+      padding: 80px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    .garantia h2 {
+      font-size: 2.5rem;
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+    .badge {
+      background: #FFD700;
+      color: #000;
+      font-weight: 700;
+      padding: 15px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      border: 2px solid #000;
+    }
+    .garantia p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.2rem;
+    }
+
+    /* Testimonios */
+    .testimonios {
+      padding: 80px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    .testimonios h2 {
+      font-size: 2.8rem;
+      color: #FFD700;
+      margin-bottom: 40px;
+    }
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+    }
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 3px solid #FFD700;
+    }
+    .testimonial-name {
+      font-weight: 700;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+    }
+
+    /* CTA Final */
+    .cta-final {
+      padding: 100px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    .cta-final h2 {
+      font-size: 2.8rem;
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+    .cta-final p {
+      font-size: 1.3rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #aaa;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      margin-top: 20px;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      .super-copy h2,
+      .oferta h2,
+      .garantia h2,
+      .testimonios h2,
+      .cta-final h2 {
+        font-size: 2rem;
+      }
+      .benefits li {
+        font-size: 1.1rem;
+      }
+      .value-box {
+        padding: 20px 15px;
+      }
+      .price-today {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>De Cero a Experto en Criptomonedas en 30 Días</h1>
+      <p>Con <strong>CriptoFácil30</strong> aprenderás a invertir de forma sencilla, práctica y segura</p>
+      <a href="https://tupaginadepagos.com/compra-criptofacil30" class="btn" target="_blank">¡Quiero mi copia por solo $4.90!</a>
+    </div>
+  </section>
+
+  <!-- Super Copy -->
+  <section class="super-copy">
+    <div class="container">
+      <h2>¿Confundido con tanta información sobre criptomonedas?</h2>
+      <p style="font-size: 1.3rem;">Este ebook te guía paso a paso, en un lenguaje claro y práctico, sin tecnicismos inútiles.</p>
+      <ul class="benefits">
+        <li>Aprende desde cero sin conocimientos previos</li>
+        <li>Domina los 7 módulos clave de inversión</li>
+        <li>Estrategias prácticas en solo 30 días</li>
+        <li>Aumenta tu confianza para invertir</li>
+      </ul>
+      <a href="https://tupaginadepagos.com/compra-criptofacil30" class="btn" target="_blank">Empieza ahora por $4.90</a>
+    </div>
+  </section>
+
+  <!-- Oferta Irresistible (Stack de Valor) -->
+  <section class="oferta">
+    <div class="container">
+      <h2>Obtén Todo Este Valor por Menos del 5%</h2>
+      
+      <div class="value-box">
+        <p class="value-item">📘 Ebook + 7 módulos completos → <strong>Valor $49</strong></p>
+        <p class="value-item">📅 Guía paso a paso de 30 días → <strong>Valor $29</strong></p>
+        <p class="value-item">📎 Plantillas y ejemplos prácticos → <strong>Valor $19</strong></p>
+        <p class="value-total">Precio total real: $97</p>
+        
+        <div class="discount-alert">❌ Pero hoy lo obtienes por solo:</div>
+        <div class="price-today">¡SOLO $4.90!</div>
+        
+        <p style="font-weight: 600; margin: 15px 0;">Acceso inmediato • Descarga instantánea • Garantía de devolución</p>
+      </div>
+
+      <a href="https://tupaginadepagos.com/compra-criptofacil30" class="btn btn-large" target="_blank">Sí, Quiero Mi Ebook Ahora</a>
+    </div>
+  </section>
+
+  <!-- Garantía -->
+  <section class="garantia">
+    <div class="container">
+      <div class="badge">Garantía 100% Satisfacción</div>
+      <h2>Tu éxito está garantizado</h2>
+      <p>Si en 7 días no quedas satisfecho con lo que aprendas, te devolvemos tu dinero sin preguntas. Sin riesgos, solo resultados.</p>
+      <a href="https://tupaginadepagos.com/compra-criptofacil30" class="btn" target="_blank">Compra sin riesgos</a>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonios">
+    <div class="container">
+      <h2>Lo que dicen quienes ya lo probaron</h2>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <img src="https://placehold.co/100/FFD700/000?text=JP" alt="Juan P." class="testimonial-img">
+          <div class="testimonial-name">Juan P.</div>
+          <p class="testimonial-text">Gracias a CriptoFácil30 entendí finalmente cómo invertir sin complicarme. En 2 semanas ya estaba aplicando estrategias reales.</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="https://placehold.co/100/FFD700/000?text=MC" alt="María C." class="testimonial-img">
+          <div class="testimonial-name">María C.</div>
+          <p class="testimonial-text">Yo no entendía nada de cripto. Este ebook me cambió la mentalidad y ahora tengo mis primeras ganancias.</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="https://placehold.co/100/FFD700/000?text=AR" alt="Alejandro R." class="testimonial-img">
+          <div class="testimonial-name">Alejandro R.</div>
+          <p class="testimonial-text">Lo mejor es que no habla de jerga técnica. Todo está explicado como si te lo contara un amigo experto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>¡Transforma tu futuro financiero en solo 30 días!</h2>
+      <p>Acceso inmediato al ebook CriptoFácil30 por solo $4.90 — menos que una taza de café</p>
+      <a href="https://tupaginadepagos.com/compra-criptofacil30" class="btn btn-large" target="_blank">Sí, Quiero Mi Ebook Ahora</a>
+      <p style="color: #777; font-size: 0.9rem;">Pago seguro • Descarga instantánea • Garantía de devolución de 7 días</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        <a href="#">Políticas de Privacidad</a> • 
+        <a href="#">Términos y Condiciones</a>
+      </p>
+      <p class="copyright">© 2025 CriptoFácil30 - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Efecto suave al hacer scroll a secciones
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Añadir animación al hacer scroll
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.value-item, .testimonial-card').forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'all 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
